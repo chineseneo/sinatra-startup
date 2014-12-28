@@ -47,23 +47,23 @@ class Main < Sinatra::Application
   end
 
   get '/' do
-    @page_title = '主页'
+    @page_title = '首页'
     erb :index, :layout => :default,
         :layout_options => {:views => settings.layouts_dir}
   end
-  get '/products' do
-    @page_title = '产品信息'
-    erb :products, :layout => :default,
-        :layout_options => {:views => settings.layouts_dir}
-  end
   get '/information' do
-    @page_title = '公司信息'
+    @page_title = '公司概况'
     erb :information, :layout => :default,
         :layout_options => {:views => settings.layouts_dir}
   end
-  get '/contact_us' do
-    @page_title = '联系我们'
-    erb :contact_us, :layout => :default,
+  get '/projects' do
+    @page_title = '项目情况'
+    erb :projects, :layout => :default,
+        :layout_options => {:views => settings.layouts_dir}
+  end
+  get '/products' do
+    @page_title = '产品展示'
+    erb :products, :layout => :default,
         :layout_options => {:views => settings.layouts_dir}
   end
 end

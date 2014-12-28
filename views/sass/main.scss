@@ -1,4 +1,12 @@
 body {
   width: 1080px;
-  margin: 0 auto;
+  margin: 0 auto 50px auto;
+
+  h2 {
+    text-decoration: underline;
+  }
+}
+
+.content {
+  padding: 0 20px;
 }
