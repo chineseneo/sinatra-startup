@@ -20,13 +20,14 @@
 </head>
 <body ng-app>
   <div class="header">
-    <h1><%= @page_title %></h1>
-    <div class="link-group">
-      <div class="link">
-        <a href="/">主页</a>
-        <a href="/information">公司概况</a>
-        <a href="/projects">项目情况</a>
-        <a href="/products">产品展示</a>
-      </div>
+    <div class="logo">
+      <img src="<%= url('/images/logo.png') %>" alt="logo"/>
+      <span>奕诚科技</span>
+    </div>
+    <div class="navigator">
+      <a class="link" ng-class="{active: 'index' == '<%= @page_name %>'}" href="/">首页</a>
+      <a class="link" ng-class="{active: 'information' == '<%= @page_name %>'}" href="/information">公司概况</a>
+      <a class="link" ng-class="{active: 'projects' == '<%= @page_name %>'}" href="/projects">项目情况</a>
+      <a class="link" ng-class="{active: 'products' == '<%= @page_name %>'}" href="/products">产品展示</a>
     </div>
   </div>
