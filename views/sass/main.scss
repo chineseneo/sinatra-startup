@@ -129,7 +129,8 @@ body {
 
 .background {
   z-index: -1;
-  background-image: url('/images/homepage-background.png');
+  background: url('/images/homepage-background.png') no-repeat center;
+  background-size: cover;
   position: absolute;
   top: 0;
   left: 0;
