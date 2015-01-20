@@ -1,5 +1,5 @@
-source "https://rubygems.org"
-ruby "1.9.3"
+source "https://ruby.taobao.org/"
+ruby "2.0.0"
 
 # Server for production environment.
 #gem 'unicorn'

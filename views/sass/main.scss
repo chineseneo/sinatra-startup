@@ -66,11 +66,11 @@ body {
     .feature {
       position: relative;
       float: left;
-      width: 250px;
-      height: 194px;
+      width: 210px;
+      height: 210px;
       font-size: 16px;
       color: #D8FF00;
-      margin: 0 38px;
+      margin: 0 58px;
 
       span {
         display: inline-block;
@@ -78,10 +78,60 @@ body {
         font-weight: bold;
       }
 
+      &:hover {
+        color: #96D500;
+        background: url("/images/feature-hover-circle.png") no-repeat;
+
+        &.feature1 {
+          i {
+            position: absolute;
+            left: 125px;
+            top: 45px;
+            background: url("/images/feature1-hover.png") no-repeat;
+          }
+
+          .title {
+            position: relative;
+            left: 53px;
+            top: 34px;
+          }
+        }
+
+        &.feature2 {
+          i {
+            position: absolute;
+            left: 60px;
+            top: 37px;
+            background: url("/images/feature2-hover.png") no-repeat;
+          }
+
+          .title {
+            position: relative;
+            left: 96px;
+            top: 34px;
+          }
+        }
+
+        &.feature3 {
+          i {
+            position: absolute;
+            left: 55px;
+            top: 30px;
+            background: url("/images/feature3-hover.png") no-repeat;
+          }
+
+          .title {
+            position: relative;
+            left: 97px;
+            top: 34px;
+          }
+        }
+      }
+
       &.feature1 {
         i {
           position: absolute;
-          right: 0;
+          left: 84px;
           top: 0;
           width: 174px;
           height: 194px;
@@ -90,7 +140,7 @@ body {
       }
 
       &.feature2 {
-        span {
+        .title {
           position: relative;
           left: 175px;
           top: 15px;
@@ -107,10 +157,20 @@ body {
       }
 
       &.feature3 {
-        span {
+        .title {
           position: relative;
           left: 138px;
           top: 15px;
+        }
+
+        .explanation {
+          font-size: 16px;
+          color: #737373;
+          position: relative;
+          left: 35px;
+          top: 60px;
+          width: 140px;
+          text-align: center;
         }
 
         i {

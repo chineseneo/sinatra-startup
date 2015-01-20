@@ -7,17 +7,18 @@
     <div class="foreword">
       <span>我们专注且执着于这些事情...</span>
     </div>
-    <div class="feature feature1">
+    <div class="feature feature1" ng-mouseenter="hovered1 = true" ng-mouseleave="hovered1 = false">
       <i></i>
-      <span>药用植物粗加工及推广种植</span>
+      <span class="title">药用植物粗加工及推广种植</span>
     </div>
-    <div class="feature feature2">
+    <div class="feature feature2" ng-mouseenter="hovered2 = true" ng-mouseleave="hovered2 = false">
       <i></i>
-      <span>经济作物加工</span>
+      <span class="title">经济作物加工</span>
     </div>
-    <div class="feature feature3">
+    <div class="feature feature3" ng-mouseenter="hovered3 = true" ng-mouseleave="hovered3 = false">
       <i></i>
-      <span>珍稀植物生物提取</span>
+      <span class="title">珍稀植物生物提取</span>
+      <span class="explanation" ng-if="hovered3">通过分析实验，从植物种子中提取高经济价值物质</span>
     </div>
   </div>
 </div>
