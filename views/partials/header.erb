@@ -18,13 +18,19 @@
   <![endif]-->
   <script src="<%= url('/javascripts/angular.js') %>"></script>
 </head>
-<body ng-app>
-  <div class="header">
+<body ng-app ng-init="
+  indexPage = 'index' == '<%= @page_name %>';
+  informationPage = 'information' == '<%= @page_name %>';
+  projectsPage = 'projects' == '<%= @page_name %>';
+  productsPage = 'products' == '<%= @page_name %>';
+  " ng-class="{'company-intro': informationPage}">
+  <div class="header" ng-class="{'index-header': indexPage}">
     <div class="logo">
-      <img src="<%= url('/images/logo.png') %>" alt="logo"/>
+      <img src="<%= url('/images/logo-index.png') %>" alt="logo" ng-if="indexPage"/>
+      <img src="<%= url('/images/logo.png') %>" alt="logo" ng-if="!indexPage"/>
     </div>
     <div class="navigator">
-      <a class="link" ng-class="{active: 'index' == '<%= @page_name %>'}" href="/">首页</a>
+      <a class="link" ng-class="{active: indexPage}" href="/">首页</a>
       <a class="link" ng-class="{active: 'information' == '<%= @page_name %>'}" href="/information">公司概况</a>
       <a class="link" ng-class="{active: 'projects' == '<%= @page_name %>'}" href="/projects">项目情况</a>
       <a class="link" ng-class="{active: 'products' == '<%= @page_name %>'}" href="/products">产品展示</a>

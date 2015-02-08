@@ -1,4 +1,6 @@
 body {
+  color: #333333;
+
   & > * {
     width: 980px;
     margin: 0 auto;
@@ -12,14 +14,10 @@ body {
   }
 }
 
-.content {
-  padding: 0 20px;
-}
-
 .header {
   height: 70px;
   line-height: 40px;
-  padding: 14px;
+  padding: 14px 0;
   position: relative;
 
   .logo {
@@ -31,17 +29,28 @@ body {
 
     .link {
       font-size: 16px;
-      color: #F5F5F5;
+      color: #737373;
 
       &:not(:last-of-type) {
         margin-right: 30px;
       }
 
       &.active {
-        color: #D8FF00;
+        color: #8BC501;
       }
     }
   }
+
+  &.index-header {
+    .link {
+      color: #F5F5F5;
+    }
+
+    &.active {
+      color: #D8FF00;
+    }
+  }
+
 }
 
 .show-case {
@@ -344,5 +353,265 @@ body {
     color: #3D454A;
     margin-top: 20px;
     margin-bottom: 20px;
+  }
+}
+
+.row {
+  margin: 0;
+
+  &:before {
+    content: '';
+    display: table;
+  }
+
+  &:after {
+    content: '';
+    display: table;
+  }
+}
+
+.company-intro {
+  & > * {
+    margin: 0 auto;
+  }
+
+  .cross-row {
+    width: 100%;
+    background-color: #F6F8F9;
+
+    & > div {
+      width: 980px;
+      margin: 0 auto;
+    }
+  }
+
+  .summary {
+    .slogan {
+      height: 404px;
+      background: url("/images/summary-slogan.png");
+    }
+
+    .content {
+      padding: 0;
+      position: relative;
+      top: -20px;
+
+      p {
+        margin-bottom: 30px;
+        color: #333333;
+      }
+    }
+  }
+
+  .cooperators {
+    padding: 30px 0;
+
+    .title {
+      font-size: 18px;
+      color: #333333;
+      text-align: center;
+      padding-bottom: 20px;
+    }
+
+    .image {
+      height: 378px;
+      background: url("/images/cooperator-image.png");
+      margin-bottom: 20px;
+    }
+
+    .cooperator {
+      float: left;;
+      width: 326px;
+      p {
+        margin-bottom: 5px;
+        text-align: center;
+        color: #737373;
+      }
+    }
+  }
+
+  .cooperative {
+    clear: both;
+    position: relative;
+    padding: 30px 0;
+
+    .icon {
+      width: 113px;
+      height: 106px;
+      background: url("/images/icon-cooperative.png");
+      position: absolute;
+      left: 80px;
+      top: 60px;
+    }
+
+    .content {
+      margin-left: 500px;
+
+      .title {
+        font-size: 18px;
+        margin-bottom: 35px;
+      }
+
+      p {
+        margin-bottom: 5px;
+
+        .feature {
+          color: #737373;
+        }
+      }
+    }
+  }
+
+  #patent {
+    padding: 30px 0;
+
+    .title {
+      padding: 0 30px;
+      margin-bottom: 30px;
+
+      & > * {
+        float: right;
+      }
+
+      .name {
+        font-size: 18px;
+        position: relative;
+        top: 30px;
+        right: 10px;
+      }
+
+      .icon {
+        width: 89px;
+        height: 83px;
+        background: url("/images/icon-patent.png");
+      }
+    }
+
+    .patent {
+      float: left;
+      width: 223px;
+
+      &:not(:last-of-type) {
+        margin-right: 16px;
+      }
+
+      .illustration {
+        height: 130px;
+      }
+    }
+
+    #patent-1 .illustration {
+      background: url("/images/patent-1.png");
+    }
+
+    #patent-2 .illustration {
+      background: url("/images/patent-2.png");
+    }
+
+    #patent-3 .illustration {
+      background: url("/images/patent-3.png");
+    }
+
+    #patent-4 .illustration {
+      background: url("/images/patent-4.png");
+    }
+  }
+
+  #research-status {
+    padding: 30px 0 20px 0;
+
+    .title {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 18px;
+
+      .icon {
+        display: inline-block;
+        width: 58px;
+        height: 36px;
+        background: url("/images/icon-research-status.png");
+      }
+
+      .name {
+        position: relative;
+        bottom: 10px;
+      }
+    }
+
+    .content {
+      margin-bottom: 30px;
+
+      p {
+        width: 80%;
+        text-align: center;
+        margin: 0 auto;
+      }
+    }
+
+    .researchers {
+      height: 472px;
+      background: url("/images/researchers.png");
+      position: relative;
+
+      .researcher {
+        position: absolute;
+
+        span {
+          display: inline-block;
+        }
+
+        .name {
+          font-size: 16px;
+        }
+
+        .intro, .desc {
+          display: inline-block;
+          font-size: 13px;
+          color: #737373;
+        }
+      }
+
+      #researcher-1 {
+        top: 35px;
+        left: 55px;
+        width: 171px;
+      }
+
+      #researcher-2 {
+        right: 199px;
+        top: 60px;
+        width: 221px;
+      }
+
+      #researcher-3 {
+        right: 187px;
+        bottom: 158px;
+        width: 233px;
+      }
+
+      #researcher-4 {
+        top: 264px;
+        left: 218px;
+        width: 158px;
+      }
+
+      #researcher-5 {
+        top: 379px;
+        left: 218px;
+        width: 286px;
+      }
+
+      #researcher-6 {
+        top: 167px;
+        left: 155px;
+        width: 314px;
+      }
+
+      #researcher-7 {
+        bottom: 30px;
+        right: 98px;
+        width: 272px;
+      }
+    }
   }
 }
