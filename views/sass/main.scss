@@ -1,10 +1,14 @@
+@import "icons";
+
+@mixin centered() {
+  width: 980px;
+  margin: 0 auto;
+}
+
 body {
   color: #333333;
+  line-height: 1.5;
 
-  & > * {
-    width: 980px;
-    margin: 0 auto;
-  }
   h2 {
     text-decoration: underline;
   }
@@ -15,6 +19,7 @@ body {
 }
 
 .header {
+  @include centered();
   height: 70px;
   line-height: 40px;
   padding: 14px 0;
@@ -50,10 +55,10 @@ body {
       color: #D8FF00;
     }
   }
-
 }
 
 .show-case {
+  @include centered();
   height: 551px;
 
   .slogan {
@@ -196,7 +201,7 @@ body {
   }
 }
 
-.background {
+.index-background {
   z-index: -1;
   background: url('/images/homepage-background.png') no-repeat center;
   background-size: cover;
@@ -208,7 +213,8 @@ body {
 }
 
 .achievements {
-  height: 240px;
+  @include centered();
+  height: 260px;
 
   .foreword {
     padding: 20px;
@@ -216,10 +222,15 @@ body {
     text-align: center;
   }
 
+  .content {
+    padding-bottom: 20px;
+  }
+
   .achievement {
     float: left;;
     width: 326px;
     height: 150px;
+    text-align: center;
 
     & > span {
       display: block;
@@ -227,27 +238,13 @@ body {
     }
 
     .icon {
-      margin: 0 auto 20px;
-      height: 85px;
-    }
-
-    &.incubating .icon {
-      width: 89px;
+      margin-bottom: 20px;
+      height: 83px;
     }
 
     &.scale .icon {
-      width: 128px;
       position: relative;
       left: 25px;
-    }
-
-    &.cultivation .icon {
-      width: 96px;
-
-      img {
-        position: relative;
-        top: 7px;
-      }
     }
 
     .title {
@@ -263,9 +260,10 @@ body {
 }
 
 .footer {
+  clear: both;
   width: 100%;
   background-color: #B8C4CC;
-  height: 282px;
+  height: 287px;
 
   & > div {
     width: 980px;
@@ -335,17 +333,12 @@ body {
 
     .phone, .address {
       display: inline-block;
-      padding-left: 35px;
-      height: 30px;
-      line-height: 30px;
+      height: 28px;
     }
 
-    .phone {
-      background: url("/images/phone.png") no-repeat;
-    }
-
-    .address {
-      background: url("/images/address.png") no-repeat;
+    .icon {
+      position: relative;
+      top: 8px;
     }
   }
 
@@ -386,15 +379,16 @@ body {
   }
 
   .summary {
+    @include centered();
     .slogan {
       height: 404px;
-      background: url("/images/summary-slogan.png");
+      background: url("/images/summary-slogan.png") no-repeat;
     }
 
     .content {
-      padding: 0;
       position: relative;
       top: -20px;
+      padding: 20px 0;
 
       p {
         margin-bottom: 30px;
@@ -403,7 +397,7 @@ body {
     }
   }
 
-  .cooperators {
+  #cooperators {
     padding: 30px 0;
 
     .title {
@@ -415,7 +409,7 @@ body {
 
     .image {
       height: 378px;
-      background: url("/images/cooperator-image.png");
+      background: url("/images/cooperator-image.png") no-repeat;
       margin-bottom: 20px;
     }
 
@@ -430,15 +424,13 @@ body {
     }
   }
 
-  .cooperative {
+  #cooperative {
+    @include centered();
     clear: both;
     position: relative;
     padding: 30px 0;
 
     .icon {
-      width: 113px;
-      height: 106px;
-      background: url("/images/icon-cooperative.png");
       position: absolute;
       left: 80px;
       top: 60px;
@@ -479,12 +471,6 @@ body {
         top: 30px;
         right: 10px;
       }
-
-      .icon {
-        width: 89px;
-        height: 83px;
-        background: url("/images/icon-patent.png");
-      }
     }
 
     .patent {
@@ -501,36 +487,30 @@ body {
     }
 
     #patent-1 .illustration {
-      background: url("/images/patent-1.png");
+      background: url("/images/patent-1.png") no-repeat;
     }
 
     #patent-2 .illustration {
-      background: url("/images/patent-2.png");
+      background: url("/images/patent-2.png") no-repeat;
     }
 
     #patent-3 .illustration {
-      background: url("/images/patent-3.png");
+      background: url("/images/patent-3.png") no-repeat;
     }
 
     #patent-4 .illustration {
-      background: url("/images/patent-4.png");
+      background: url("/images/patent-4.png") no-repeat;
     }
   }
 
   #research-status {
+    @include centered();
     padding: 30px 0 20px 0;
 
     .title {
       text-align: center;
       margin-bottom: 20px;
       font-size: 18px;
-
-      .icon {
-        display: inline-block;
-        width: 58px;
-        height: 36px;
-        background: url("/images/icon-research-status.png");
-      }
 
       .name {
         position: relative;
@@ -612,6 +592,245 @@ body {
         right: 98px;
         width: 272px;
       }
+    }
+  }
+}
+
+#projects {
+
+  .project-links {
+    @include centered();
+    padding: 0 123px;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    position: relative;
+
+    hr {
+      width: 103px;
+      position: absolute;
+      color: #E8E8E8;
+
+      &.left {
+        left: 0;
+
+      }
+
+      &.right {
+        right: 0;
+      }
+    }
+
+    a {
+      float: left;
+      display: inline-block;
+      color: #737373;
+      cursor: pointer;
+
+      &.active {
+        color: #8BC501;
+      }
+
+      &:not(:last-of-type) {
+        margin-right: 65px;
+      }
+
+      &#project-link-1 {
+        width: 155px;
+      }
+      &#project-link-2 {
+        width: 137px;
+      }
+      &#project-link-3 {
+        width: 135px;
+      }
+      &#project-link-4 {
+        width: 112px;
+      }
+    }
+  }
+
+  .project {
+    .slogan {
+      @include centered();
+      margin-bottom: 20px;
+    }
+
+    .content {
+      position: relative;
+
+      #constructions {
+        @include centered();
+
+        .title {
+          font-size: 18px;
+          margin-bottom: 14px;
+          text-align: center;
+        }
+
+        .constructions {
+          height: 420px;
+          position: relative;
+        }
+
+        .construction {
+          position: absolute;
+
+          .icon {
+            display: inline-block;
+            position: absolute;
+            left: -25px;
+            top: -5px;
+          }
+          .name {
+            font-size: 18px;
+            margin-bottom: 10px;
+            display: inline-block;
+          }
+
+          .desc {
+            span {
+              display: block;
+            }
+          }
+
+          &#construction-1 {
+            left: 60px;
+            top: 25px;
+          }
+
+          &#construction-2 {
+            top: 92px;
+            left: 830px;
+          }
+
+          &#construction-3 {
+            top: 262px;
+            left: 267px;
+          }
+        }
+      }
+
+      .crossline-container {
+        background-color: #F6F8F9;
+      }
+
+      #advantages {
+        @include centered();
+        height: 492px;
+        padding: 20px 0;
+
+        .title {
+          padding-left: 30px;
+          padding-bottom: 20px;
+
+          .icon.advantages {
+            width: 58px;
+            height: 67px;
+            background: url("/images/advantage.png") no-repeat;
+            display: inline-block;
+          }
+
+          .name {
+            font-size: 18px;
+            display: inline-block;
+            position: relative;
+            bottom: 35px;
+            left: 10px;
+          }
+        }
+
+        .advantage {
+          width: 445px;
+
+          &:not(:last-of-type) {
+            padding-bottom: 20px;
+          }
+        }
+      }
+
+      #extras {
+        @include centered();
+        padding: 30px 10px;
+        &:after, &:before {
+          content: '';
+          display: table;
+        }
+
+        .extra {
+          display: inline-block;
+          width: 320px;
+          float: left;
+          padding: 0 70px 20px;
+
+          &.tech-flow-path, &.effect {
+            width: 620px;
+          }
+
+          &.target {
+            width: 340px;
+          }
+
+          .title {
+            font-size: 18px;
+            margin: 20px 0;
+          }
+
+          .desc {
+            font-size: 14px;
+            color: #737373;
+
+            span:first-of-type {
+              padding-right: 20px;
+            }
+          }
+        }
+
+        .icon {
+          height: 63px;
+        }
+      }
+
+      .background {
+        z-index: 0;
+        height: 921px;
+        width: 825px;
+        position: absolute;
+        top: 32px;
+        left: 344px;
+      }
+    }
+
+    &#project-4 {
+      #advantages {
+        height: 391px;
+      }
+    }
+  }
+
+  #project-1 {
+    .background {
+      background: url("/images/project/project-1-bg.png") no-repeat center;
+    }
+  }
+
+  #project-2 {
+    .background {
+      background: url("/images/project/project-2-bg.png") no-repeat center;
+    }
+  }
+
+  #project-3 {
+    .background {
+      background: url("/images/project/project-3-bg.png") no-repeat center;
+    }
+  }
+
+  #project-4 {
+    .background {
+      height: 400px;
+      width: 495px;
+      left: 677px;
+      background: url("/images/project/project-4-bg.png") no-repeat;
     }
   }
 }

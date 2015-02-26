@@ -52,18 +52,22 @@ class Main < Sinatra::Application
     erb :index, :layout => :default,
         :layout_options => {:views => settings.layouts_dir}
   end
+
   get '/information' do
     @page_title = '公司概况'
     @page_name = 'information'
     erb :information, :layout => :default,
         :layout_options => {:views => settings.layouts_dir}
   end
+
   get '/projects' do
+    project_id = params[:project_id] || 1
     @page_title = '项目情况'
     @page_name = 'projects'
-    erb :projects, :layout => :default,
+    erb "projects-#{project_id}".to_sym, :layout => :default,
         :layout_options => {:views => settings.layouts_dir}
   end
+
   get '/products' do
     @page_title = '产品展示'
     @page_name = 'products'
