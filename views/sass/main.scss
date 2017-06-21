@@ -263,7 +263,7 @@ body {
   clear: both;
   width: 100%;
   background-color: #B8C4CC;
-  height: 287px;
+  height: 325px;
 
   & > div {
     width: 980px;
@@ -346,6 +346,11 @@ body {
     color: #3D454A;
     margin-top: 20px;
     margin-bottom: 20px;
+
+    span {
+      display: inline-block;
+      margin-right: 50px;
+    }
   }
 }
 
